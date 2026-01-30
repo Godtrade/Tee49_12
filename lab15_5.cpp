@@ -20,8 +20,8 @@ int main(){
 
 //Do not modify the code above this line
 //Write definition of shuffle() using pointer after this line. 
-void shuffle(int &x,int&y,int &z,int &e){
-    int arr[4] ={x,y,z,e};
+void shuffle(int *x,int *y,int *z,int *e){
+    int arr[4] ={*x,*y,*z,*e};
     for(int i=3;i>0;i--){
         int j = rand() % (i+1);
            int temp=arr[i];
@@ -30,8 +30,8 @@ void shuffle(int &x,int&y,int &z,int &e){
     }
  
     
-    x=arr[0];
-    y=arr[1];
-    z=arr[2];
-    e=arr[3];
+    *x=arr[0];
+    *y=arr[1];
+    *z=arr[2];
+    *e=arr[3];
 }
